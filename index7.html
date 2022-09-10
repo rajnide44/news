@@ -143,13 +143,14 @@ function myFunction(arr) {
   document.getElementById("descrip").innerHTML = arr[1];
   document.getElementById("body").innerHTML = out+"<br><br>Source:<b>"+arr[3]+"<b>";
   document.getElementById("body").innerHTML= document.getElementById("body").innerHTML;
-    if(screen.width>800)
+    if(screen.width>900)
     {
   document.getElementsByClassName("sidebar")[0].style.transform="translateY(-"+(document.getElementsByClassName("content")[0].clientHeight)+"px)";
     }else{
-          document.getElementsByClassName("content")[0].style.width="100%";
-          document.getElementsByClassName("sidebar")[0].style.width="100%";
+          document.getElementsByClassName("content")[0].style.width=(screen.width-10)+"px";
+          document.getElementsByClassName("sidebar")[0].style.width=(screen.width-10)+"px";
           document.getElementsByClassName("sidebar")[0].style.float="left";
+          document.getElementByClassName("navigation")[0].style.transform="translateX(80px);
     }
   
 }
