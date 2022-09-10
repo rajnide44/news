@@ -83,8 +83,18 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script>
-        search24();
-
+        search24();desktopMobileConfig();
+      function desktopMobileConfig(){
+                  if(screen.width>900)
+          {
+        document.getElementsByClassName("sidebar")[0].style.transform="translateY(-"+(document.getElementsByClassName("content")[0].clientHeight)+"px)";
+          }else{
+                document.getElementsByClassName("content")[0].style.width=(screen.width-35)+"px";
+                document.getElementsByClassName("sidebar")[0].style.width=(screen.width-50)+"px";
+                document.getElementsByClassName("sidebar")[0].style.float="left";
+                document.getElementsByClassName("navigation")[0].style.transform="translateX(-10px)";
+          }
+      }
         var themecount=0;
         function themechng(){
             themecount++;
@@ -150,7 +160,7 @@ function myFunction(arr) {
           document.getElementsByClassName("content")[0].style.width=(screen.width-35)+"px";
           document.getElementsByClassName("sidebar")[0].style.width=(screen.width-50)+"px";
           document.getElementsByClassName("sidebar")[0].style.float="left";
-          document.getElementsByClassName("navigation")[0].style.transform="translateX(-10px)";
+          document.getElementsByClassName("navigation")[0].style.transform="translateX(-14px)";
     }
   
 }
