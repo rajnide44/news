@@ -17,7 +17,30 @@
         <div class="sidebar" id="sidebar">
             <h3 class="sidehead">MOST POPULAR</h3><span class="hrline0"></span>
             <br>
-            
+            <a href="">
+                <div class="post">
+                    <span class="sidetitle">India’s GDP has turned around but structural problems remain</span>
+                    <br>
+                    <span class="sideauthor">Rakhesh Sharma</span>
+                    <span class="sidedate">9 September,2022</span>
+                </div>
+            </a>
+            <a href="">
+                <div class="post">
+                    <span class="sidetitle">How Punjab’s most-wanted yesteryear terrorists are operating openly in Lahore, popping up on FB</span>
+                    <br>
+                    <span class="sideauthor">Rakhesh Sharma</span>
+                    <span class="sidedate">9 September,2022</span>
+                </div>
+            </a>
+            <a href="">
+                <div class="post">
+                    <span class="sidetitle">‘Dawood propagandist’: BJP slams Uddhav over Yakub grave beautification, Sena denies hand</span>
+                    <br>
+                    <span class="sideauthor">Rakhesh Sharma</span>
+                    <span class="sidedate">9 September,2022</span>
+                </div>
+            </a>
         </div>
 
 
@@ -97,10 +120,11 @@
         }
         });
 
-var homeurl="https://raw.githack.com/rajnide44/news/main/index.html", winurl=window.location.href;
 function search24(){
 var xmlhttp = new XMLHttpRequest();
-var url = "https://raw.githubusercontent.com/rajnide44/news/main/Congress_BJP_Christian_Priest";
+    var url = window.location.href;
+var result = url.slice(55);
+var url = "https://raw.githubusercontent.com/rajnide44/news/main/"+result;
 
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
@@ -117,8 +141,7 @@ function myFunction(arr) {
  out=out.replace('/n;',' ');
   document.getElementById("title").innerHTML = arr[0];
   document.getElementById("descrip").innerHTML = arr[1];
-  document.getElementById("sidebar").innerHTML+=arr[3];
-  document.getElementById("body").innerHTML = out+"<br><br>Source:<b>"+arr[4]+"<b>";
+  document.getElementById("body").innerHTML = out+"<br><br>Source:<b>"+arr[3]+"<b>";
   document.getElementById("body").innerHTML= document.getElementById("body").innerHTML;
   document.getElementsByClassName("sidebar")[0].style.transform="translateY(-"+(document.getElementsByClassName("content")[0].clientHeight)+"px)";
   
