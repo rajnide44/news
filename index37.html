@@ -12,8 +12,8 @@
             <div class="body" id="body">
                 
             </div>
-
-<div>Source: <span id="source"></span></div>
+<br>
+<div style="text-align: left">Source: <span id="source"></span></div>
         </div>
 
         <div class="sidebar" id="sidebar">
@@ -152,7 +152,7 @@ function myFunction(arr) {
         //sharing post
 
                 const shareData = {
-        text: document.getElementById("title").innerHTML+' : '+document.getElementById("source").innerHTML,
+        text: document.getElementById("title").innerHTML+''+document.getElementById("source").innerHTML,
         title: 'Have a reading of this article:-',
         url: window.location.href
         };
