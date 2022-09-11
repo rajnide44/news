@@ -12,6 +12,7 @@
             <div class="body" id="body">
                 
             </div>
+
 <div>Source: <span id="source"></span></div>
         </div>
 
@@ -135,8 +136,8 @@ function myFunction(arr) {
  out=out.replace('/n;',' ');
   document.getElementById("title").innerHTML = arr[0];
   document.getElementById("descrip").innerHTML = arr[1];
+  document.getElementById("body").innerHTML = arr[2];
   document.getElementById("source").innerHTML = "<b>"+arr[3]+"</b>";
-  document.getElementById("body").innerHTML= document.getElementById("body").innerHTML;
     if(screen.width>900)
     {
   document.getElementsByClassName("sidebar")[0].style.transform="translateY(-"+(document.getElementsByClassName("content")[0].clientHeight)+"px)";
