@@ -164,11 +164,11 @@ function myFunction(arr) {
         }
       }
         const btn = document.querySelector('#sharebtn');
-        const resultPara = document.querySelector('.result');
 
         // Share must be triggered by "user activation"
         btn.addEventListener('click', async () => {
         try {
+sharePost();
             await navigator.share(shareData);
         } catch (err) {
         }
