@@ -1,5 +1,4 @@
 
-
 <html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <body>
@@ -134,10 +133,10 @@
 
 function search24(){
 var xmlhttp = new XMLHttpRequest();
-  var url = window.location.href;
-var result = url.slice(56);
-url=url+result;
-    console.log(url);
+ var url = window.location.href;
+var result = url.slice(57);
+url = "https://raw.githubusercontent.com/rajnide44/news/main/"+result;
+
 xmlhttp.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
   var myArr = JSON.parse(this.responseText);
