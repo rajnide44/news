@@ -136,7 +136,7 @@ var xmlhttp = new XMLHttpRequest();
  var url = window.location.href;
 var result = url.slice(57);console.log(result);
 url = "https://raw.githubusercontent.com/rajnide44/news/main/"+result;
-    console.log(url);
+    console.log(result);
 
 xmlhttp.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
