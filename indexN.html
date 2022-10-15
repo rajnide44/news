@@ -95,11 +95,9 @@
               document.getElementsByClassName("navigation")[0].style.transform="translateX(-10px)";
         }
     }
-      var themecount=1;
+      var themecount=0;
       function themechng(){
           themecount++;
-if(themecount>3)
-themecount=1;
           var r = document.querySelector(':root');
           var colors;
           if(themecount%2==0)
@@ -203,9 +201,9 @@ document.getElementsByClassName("sidebar")[0].style.transform="translateY(-"+(do
       }
       .navigation{
           user-select: none;
-          position: fixed;
+          position: sticky;
           left:50%;
-          transform: translateX(175px);
+          transform: translateX(-175px);
           z-index:3;
           bottom:5px;
           height:60px;
