@@ -71,7 +71,7 @@
                       <span class="name">THEME</span>
                   </a>
               </li>
-              <li class="list">
+              <li class="list" onclick="themechng()">
                   <a>
                       <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
                       <span class="name">SETTING</span>
@@ -98,10 +98,14 @@
       var themecount=0;
       function themechng(){
           themecount++;
+if(themecount>3)
+themecount=1;
           var r = document.querySelector(':root');
           var colors;
           if(themecount%2==0)
           colors={clr:'#ebebeb',txtcol: 'rgb(25,25,27)',scndclr:'#f0f0f0', scndtxtcol: '#4a4a4d', contclr:'#fff'};
+          else if(themecount%3==0)
+          colors={clr:'#222',txtcol: 'rgb(170,170,170)',scndclr:'#3a3a3d', scndtxtcol: '#e4e4e4', contclr:'#181819'};
           else
           colors={clr:'#262626',txtcol: 'rgb(210,210,210)',scndclr:'#3a3a3d', scndtxtcol: '#e4e4e4', contclr:'#222'};
 
