@@ -96,19 +96,18 @@
               document.getElementsByClassName("navigation")[0].style.transform="translateX(-10px)";
         }
     }
-      var themecount=1;
+      var themecount=0;
       function themechng(){
           themecount++;
-if(themecount>3)
-themecount=1;
+          themecount=(themecount>3)? 1: themecount;
           var r = document.querySelector(':root');
           var colors;
-          if(themecount==2)
+          if(themecount==1)
           colors={clr:'#262626',txtcol: 'rgb(222,222,222)',scndclr:'#3a3a3d', scndtxtcol: '#e4e4e4', contclr:'#242424'};
+          else if(themecount==2)
+          colors={clr:'#000',txtcol: 'rgb(200,200,200)',scndclr:'#222', scndtxtcol: '#e4e4e4', contclr:'#000'};
           else if(themecount==3)
           colors={clr:'#ebebeb',txtcol: 'rgb(25,25,27)',scndclr:'#f0f0f0', scndtxtcol: '#4a4a4d', contclr:'#fff'};
-          else
-          colors={clr:'#000',txtcol: 'rgb(200,200,200)',scndclr:'#222', scndtxtcol: '#e4e4e4', contclr:'#000'};
 
           r.style.setProperty('--clr', colors.clr);
           r.style.setProperty('--txtcol', colors.txtcol);
@@ -119,7 +118,7 @@ themecount=1;
 
       //sharing post
               const shareData = {
-      text: document.getElementById("title").innerHTML+' : Hindustan Times',
+      text: document.getElementById("title").innerHTML,
       title: 'Have a reading of this article:-',
       url: window.location.href
       }
@@ -137,7 +136,12 @@ themecount=1;
       });
 function editArt(){
     var url = window.location.href;
-    location.href="https://github.com/rajnide44/news/edit/main/"+url.slice(56);
+    location.href="https://github.com/rajnide44/news/edit/main/"+url.slice(57);
+shareData = {
+      text: document.getElementById("title").innerHTML,
+      title: 'Have a reading of this article:-',
+      url: window.location.href
+      }
 }
 function search24(){
 var xmlhttp = new XMLHttpRequest();
