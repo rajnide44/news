@@ -96,9 +96,11 @@
               document.getElementsByClassName("navigation")[0].style.transform="translateX(-10px)";
         }
     }
-      var themecount=0;
+      var themecount=1;
       function themechng(){
           themecount++;
+if(themecount>3)
+themecount=1;
           var r = document.querySelector(':root');
           var colors;
           if(themecount%2==0)
