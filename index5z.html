@@ -48,8 +48,8 @@
   
       <div class="navigation">
           <ul>
-              <li class="list">
-                  <a href="#Congress_BJP_Christian_Priest">
+              <li class="list" onclick="openFullscreen()">
+                  <a href="">
                       <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                       <span class="name">HOME</span>
                   </a>
@@ -100,6 +100,17 @@
             document.getElementsByClassName("navigation")[0].style.left="0px";
         }
     }
+      function openFullscreen() {
+          var elem = document.body;
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
       var themecount=0;
       function themechng(){
           themecount++;
