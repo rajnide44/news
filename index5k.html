@@ -72,7 +72,7 @@
                       <span class="name">THEME</span>
                   </a>
               </li>
-              <li class="list">
+              <li class="list" onclick="sepiaTheme()">
                   <a>
                       <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
                       <span class="name">SETTING</span>
@@ -119,6 +119,20 @@
           r.style.setProperty('--scndtxtcol', colors.scndtxtcol);        
           r.style.setProperty('--contclr', colors.contclr);        
       }
+      var sepThe=0;
+      function sepiaTheme(){
+          sepThe++;
+          var r = document.querySelector(':root');
+          var colors;          
+          colors={clr:'#e3ceb9',txtcol: '#000',scndclr:'#dcc1a7', scndtxtcol: '#777', contclr:'#d3b392'};
+          
+          r.style.setProperty('--clr', colors.clr);
+          r.style.setProperty('--txtcol', colors.txtcol);
+          r.style.setProperty('--scndclr', colors.scndclr);
+          r.style.setProperty('--scndtxtcol', colors.scndtxtcol);        
+          r.style.setProperty('--contclr', colors.contclr);     
+      }
+      
 
       //sharing post
               const shareData = {
