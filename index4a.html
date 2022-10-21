@@ -49,10 +49,10 @@
       <div class="navigation">
           <ul>
               <li class="list" onclick="openFullscreen()">
-                  <!--<a href="">-->
+                  <a>
                       <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                       <span class="name">HOME</span>
-                  <!--</a>-->
+                  </a>
               </li>
               <li class="list">
                   <a onclick="editArt()">
@@ -102,6 +102,7 @@
     }
       function openFullscreen() {
           var elem = document.body;
+          document.getElementsByClassName("content")[0].style.width=(screen.width-2)+"px";
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
   } else if (elem.webkitRequestFullscreen) { /* Safari */
