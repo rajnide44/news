@@ -103,7 +103,9 @@
       
       var elem = document.body;
       function openFullscreen() {
-          document.getElementsByClassName("content")[0].style.width=(screen.width-10)+"px";
+          document.getElementsByClassName("content")[0].style.width=(screen.width-13)+"px";
+          document.getElementsByClassName("content")[0].style.height=(screen.width)+"px";
+          document.getElementsByClassName("content")[0].style.overflow="scroll";
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
   } else if (elem.webkitRequestFullscreen) { /* Safari */
