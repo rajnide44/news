@@ -100,8 +100,9 @@
             document.getElementsByClassName("navigation")[0].style.left="0px";
         }
     }
+      
+      var elem = document.body;
       function openFullscreen() {
-          var elem = document.body;
           document.getElementsByClassName("content")[0].style.width=(screen.width-10)+"px";
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
