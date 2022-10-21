@@ -123,7 +123,10 @@
       function sepiaTheme(){
           sepThe++;
           var r = document.querySelector(':root');
-          var colors;          
+          var colors;
+          if(sepThe%2==1)
+          colors={clr:'#fbf0d9',txtcol: '#222',scndclr:'#d3b392', scndtxtcol: '#444', contclr:'#fbf0d9'};
+          else
           colors={clr:'#d7b99d',txtcol: '#000',scndclr:'#d3b392', scndtxtcol: '#444', contclr:'#d7b99d'};
           
           r.style.setProperty('--clr', colors.clr);
